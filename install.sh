@@ -1,19 +1,14 @@
 #!/bin/bash
 
-# Backup vorhandener zshrc
-if [ -f ~/.zshrc ];
-    then
-        mv ~/.zshrc ~/.zshrc.backup
-fi
-
-# Alle anderen verwerfen
+# Discard existing dotfiles
 rm ~/.zlogin
 rm ~/.zlogout
 rm ~/.zpreztorc
 rm ~/.zprofile
-rm ~/.zshenc
+rm ~/.zshenv
+rm ~/.zshrc
 
-# Und aus dem Repo linken
+# Link from repo
 ln -s ~/.zprezto/runcoms/zlogin ~/.zlogin
 ln -s ~/.zprezto/runcoms/zlogout ~/.zlogout
 ln -s ~/.zprezto/runcoms/zpreztorc ~/.zpreztorc
